@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#f4f4f4" >
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_gravity="center"
+	android:weightSum="9"
+	android:gravity="center">
 
-    <ExpandableListView
-        android:id="@+id/lvExp"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
+	<ExpandableListView
+	    android:id="@+id/lvExp"
+	    android:layout_height="0dp"
+	    android:layout_width="match_parent"
+	    android:layout_weight="8" />
+	<TextView
+	    android:id="@+id/empty"
+	    android:layout_height="0dp"
+	    android:layout_width="match_parent"
+	    android:text="List is empty."
+	    android:layout_weight="1" />
+
+	<Button
+		android:id="@+id/fakeContact"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:text="Make one up"
+		android:onClick="addRandomEntry"
+	    android:layout_weight="1"/>
+	<Button
+		android:id="@+id/getContact"
+		android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:text="Pick one"
+		android:onClick="addFromContactsApp"
+	    android:layout_weight="1"/>
 
 </LinearLayout>
+
